@@ -1,0 +1,250 @@
+/* ===== Reset y base ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --verde-oscuro: #1b5e20;
+  --verde: #2e7d32;
+  --verde-claro: #66bb6a;
+  --arena: #f4f7f0;
+  --texto: #263238;
+  --sombra: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--texto);
+  line-height: 1.7;
+  background: var(--arena);
+}
+
+/* ===== Navegación ===== */
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.2rem 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.logo {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: #fff;
+}
+
+.nav-links {
+  display: flex;
+  gap: 1.8rem;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #fff;
+  text-decoration: none;
+  font-weight: 500;
+  transition: opacity 0.2s;
+}
+
+.nav-links a:hover {
+  opacity: 0.75;
+}
+
+/* ===== Hero ===== */
+.hero {
+  background: linear-gradient(135deg, var(--verde-oscuro), var(--verde-claro));
+  color: #fff;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.hero-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.hero-content h1 {
+  font-size: clamp(2rem, 5vw, 3.4rem);
+  margin-bottom: 1.2rem;
+  line-height: 1.2;
+}
+
+.hero-content p {
+  font-size: 1.15rem;
+  max-width: 600px;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  display: inline-block;
+  background: #fff;
+  color: var(--verde-oscuro);
+  padding: 0.9rem 2rem;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: var(--sombra);
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.btn:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.2);
+}
+
+/* ===== Secciones ===== */
+.section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 4.5rem 2rem;
+}
+
+.section-alt {
+  background: #fff;
+  max-width: 100%;
+}
+
+.section-alt > * {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section h2,
+.cta h2 {
+  text-align: center;
+  font-size: 2rem;
+  color: var(--verde-oscuro);
+  margin-bottom: 1rem;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 2.8rem;
+  color: #455a64;
+}
+
+/* ===== Tarjetas ===== */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.8rem;
+}
+
+.card {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--sombra);
+  transition: transform 0.25s;
+}
+
+.card:hover {
+  transform: translateY(-8px);
+}
+
+.card .icon {
+  font-size: 2.8rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.card h3 {
+  color: var(--verde);
+  margin-bottom: 0.6rem;
+}
+
+/* ===== Lista de problemas ===== */
+.problem-list {
+  max-width: 720px;
+  margin: 0 auto;
+  list-style: none;
+}
+
+.problem-list li {
+  background: var(--arena);
+  border-left: 5px solid var(--verde-claro);
+  padding: 1rem 1.3rem;
+  margin-bottom: 1rem;
+  border-radius: 8px;
+}
+
+/* ===== Acciones ===== */
+.actions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.2rem;
+}
+
+.action {
+  background: #fff;
+  padding: 1.3rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+  box-shadow: var(--sombra);
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  transition: background 0.2s, color 0.2s;
+}
+
+.action span {
+  font-size: 1.6rem;
+}
+
+.action:hover {
+  background: var(--verde);
+  color: #fff;
+}
+
+/* ===== Llamado a la acción ===== */
+.cta {
+  background: linear-gradient(135deg, var(--verde), var(--verde-oscuro));
+  color: #fff;
+  text-align: center;
+  padding: 4.5rem 2rem;
+}
+
+.cta h2 {
+  color: #fff;
+}
+
+.cta p {
+  max-width: 600px;
+  margin: 0 auto;
+  font-size: 1.15rem;
+}
+
+/* ===== Footer ===== */
+.footer {
+  background: #133718;
+  color: #c8e6c9;
+  text-align: center;
+  padding: 1.6rem;
+  font-size: 0.95rem;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 600px) {
+  .nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .nav-links {
+    gap: 1.2rem;
+  }
+}
