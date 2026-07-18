@@ -1,1 +1,4 @@
 nuevo.txt
+.env
+node_modules
+venv
